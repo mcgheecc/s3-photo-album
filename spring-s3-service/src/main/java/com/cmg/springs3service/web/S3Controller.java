@@ -2,7 +2,7 @@ package com.cmg.springs3service.web;
 
 import com.cmg.springs3service.model.S3Folder;
 import com.cmg.springs3service.model.S3MediaResponse;
-import com.cmg.springs3service.service.S3Service;
+import com.cmg.springs3service.service.IS3Service;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin(origins = "${cors.sites}")
 public class S3Controller {
 
-    private final S3Service service;
+    private final IS3Service service;
 
     @Autowired
-    public S3Controller(S3Service service) {
+    public S3Controller(IS3Service service) {
         this.service = service;
     }
 
